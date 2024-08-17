@@ -1,0 +1,23 @@
+.detailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.status {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-approved {
+  background-color: #e6f4ea;
+  color: #34a853;
+}
+
+.status-error {
+  background-color: #ffebee;
+  color: #e53935;
+}

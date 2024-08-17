@@ -1,4 +1,9 @@
-thead th::after {
+thead th {
+  padding-right: 28px;
+  position: relative;
+}
+
+thead th.sortable::after {
   font-family: "Font Awesome 5 Free";
   content: "\f0dc";
   color: #2d2d2d;
@@ -18,4 +23,12 @@ thead th.sorted-asc::after {
 thead th.sorted-desc::after {
   content: "\f0dd";
   color: #c93b34;
+}
+
+thead th:not(.sortable)::after {
+  content: "";
+}
+
+thead th.nonSortable {
+  cursor: default;
 }

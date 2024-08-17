@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -41,6 +42,19 @@ module.exports = {
         exclude: /\.module\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "images/",
+              publicPath: "/images/",
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -53,8 +67,9 @@ module.exports = {
     new Dotenv(),
   ],
   devServer: {
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "public"),
     compress: true,
     port: 3000,
+    historyApiFallback: true,
   },
 };

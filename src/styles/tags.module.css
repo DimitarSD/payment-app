@@ -1,0 +1,27 @@
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+}
+
+.saleTag {
+  background-color: #e7f3f8;
+  color: #347da8;
+}
+
+.sale3dTag {
+  background-color: #f7f3f8;
+  color: #7e5899;
+}
+
+.refundTag {
+  background-color: #fdebec;
+  color: #ba433f;
+}
+
+.authorizeTag {
+  background-color: #edf3ed;
+  color: #386a4f;
+}

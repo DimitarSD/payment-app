@@ -1,0 +1,46 @@
+.cardAccount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.cardImage {
+  width: 70px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.accountInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 16px;
+  color: #888888;
+  margin-bottom: 4px;
+}
+
+.accountName {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.transactionDate {
+  font-size: 16px;
+  color: #888888;
+}
+
+.dateBlock {
+  text-align: left;
+  margin-left: auto;
+}

@@ -4,18 +4,20 @@ import TransactionRow from "./../TransactionRow/TransactionRow";
 import * as styles from "./TransactionTable.module.css";
 import { sortTransactions, SortOrder } from "./../../utils/sortUtils";
 import SortableTableHeader from "./../SortableTableHeader/SortableTableHeader";
-import { Transaction } from "./../../types/Transaction";
+import { TransactionProps } from "../../types/TransactionProps";
 import { tableColumns } from "./../../utils/tableColumns";
 
 const TransactionTable = () => {
   const { transactions } = useTransactions();
-  const [sortColumn, setSortColumn] = useState<keyof Transaction | null>(null);
-  const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
-  const [sortedTransactions, setSortedTransactions] = useState<Transaction[]>(
-    []
+  const [sortColumn, setSortColumn] = useState<keyof TransactionProps | null>(
+    null,
   );
+  const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
+  const [sortedTransactions, setSortedTransactions] = useState<
+    TransactionProps[]
+  >([]);
 
-  const handleSort = (column: keyof Transaction) => {
+  const handleSort = (column: keyof TransactionProps) => {
     const order = column === sortColumn && sortOrder === "asc" ? "desc" : "asc";
     setSortColumn(column);
     setSortOrder(order);
@@ -26,7 +28,7 @@ const TransactionTable = () => {
       const sorted = await sortTransactions(
         transactions,
         sortColumn,
-        sortOrder
+        sortOrder,
       );
       setSortedTransactions(sorted);
     };
@@ -37,7 +39,7 @@ const TransactionTable = () => {
     <div className={styles["table-container"]}>
       <table className={styles.table}>
         <thead>
-          <SortableTableHeader<Transaction>
+          <SortableTableHeader<TransactionProps>
             columns={tableColumns}
             sortColumn={sortColumn}
             sortOrder={sortOrder}
@@ -45,8 +47,8 @@ const TransactionTable = () => {
           />
         </thead>
         <tbody>
-          {sortedTransactions.map((transaction: Transaction) => (
-            <TransactionRow key={transaction.id} transaction={transaction} />
+          {sortedTransactions.map((transaction: TransactionProps) => (
+            <TransactionRow transaction={transaction} />
           ))}
         </tbody>
       </table>

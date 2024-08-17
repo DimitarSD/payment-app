@@ -1,15 +1,15 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AppState {
   message: string;
 }
 
 const initialState: AppState = {
-  message: 'hi',
+  message: "hi",
 };
 
 const appSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState,
   reducers: {
     setMessage(state, action: PayloadAction<string>) {

@@ -1,0 +1,13 @@
+.amount {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.amount-approved {
+  color: #34a853;
+}
+
+.amount-error {
+  color: #e53935;
+}

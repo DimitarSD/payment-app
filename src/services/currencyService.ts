@@ -5,7 +5,7 @@ export const fetchConversionRates = async () => {
     const response = await fetch(API_URL);
     if (!response.ok) {
       throw new Error(
-        `Error fetching conversion rates: ${response.statusText}`
+        `Error fetching conversion rates: ${response.statusText}`,
       );
     }
     const data = await response.json();

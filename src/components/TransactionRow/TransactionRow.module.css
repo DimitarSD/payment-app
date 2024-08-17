@@ -12,3 +12,28 @@
   color: #f44336;
   font-weight: 600;
 }
+
+.link {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.cardIcon {
+  width: 26px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.cardNumber img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cardNumber {
+  white-space: nowrap;
+}

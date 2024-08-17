@@ -1,0 +1,41 @@
+.detailsContainer {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 600px;
+  font-family: "Inter", sans-serif;
+  color: #2e2e2e;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 16px 0;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .detailsContainer {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  .amount {
+    font-size: 28px;
+  }
+
+  .fieldWrapper {
+    flex-direction: column;
+  }
+
+  .fieldValue {
+    margin-top: 4px;
+  }
+}

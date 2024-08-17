@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import TransactionService from "./../services/TransactionService";
-import { Transaction } from "./../types/Transaction";
+import { TransactionProps } from "../types/TransactionProps";
 
 const transactionService = new TransactionService();
 
 const useTransactions = () => {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [transactions, setTransactions] = useState<TransactionProps[]>([]);
 
   useEffect(() => {
     const fetchTransactions = async () => {

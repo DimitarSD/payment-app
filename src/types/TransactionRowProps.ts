@@ -1,5 +1,5 @@
-import { Transaction } from "./Transaction"
+import { TransactionProps } from "./TransactionProps";
 
 export type TransactionRowProps = {
-  transaction: Transaction;
-}
+  transaction: TransactionProps;
+};

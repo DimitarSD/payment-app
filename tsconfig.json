@@ -8,7 +8,10 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "plugins": [
+      { "name": "typescript-plugin-css-modules" },
+      { "name": "typescript-organize-imports" }
+    ]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/globals.d.ts"],
   "exclude": ["node_modules"]

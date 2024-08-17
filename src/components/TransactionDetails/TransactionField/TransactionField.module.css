@@ -1,0 +1,21 @@
+.fieldWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fieldWrapper:last-child {
+  border-bottom: none;
+}
+
+.fieldName {
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.fieldValue {
+  font-size: 16px;
+  color: #333333;
+}

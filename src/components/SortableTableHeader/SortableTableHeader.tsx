@@ -24,8 +24,12 @@ const SortableTableHeader = <T,>({
         return (
           <th
             key={String(column.key)}
-            onClick={() => handleSort(column.key)}
-            className={sortClass}
+            onClick={
+              column.sortable !== false
+                ? () => handleSort(column.key)
+                : undefined
+            }
+            className={`${column.sortable !== false ? styles.sortable : styles.nonSortable} ${sortClass}`}
           >
             {column.label}
           </th>
