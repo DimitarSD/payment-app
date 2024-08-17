@@ -1,0 +1,14 @@
+.amount {
+  font-weight: 500;
+  color: #4c87af;
+}
+
+.status-approved {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.status-error {
+  color: #f44336;
+  font-weight: 600;
+}

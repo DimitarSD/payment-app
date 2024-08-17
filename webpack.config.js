@@ -24,7 +24,7 @@ module.exports = {
         },
       },
       {
-        test: /\.module\.css$/, // Only process files ending in .module.css
+        test: /\.module\.css$/,
         use: [
           "style-loader",
           {
