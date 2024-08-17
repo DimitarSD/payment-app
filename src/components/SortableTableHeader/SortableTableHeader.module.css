@@ -1,0 +1,21 @@
+thead th::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0dc";
+  color: #2d2d2d;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+  font-size: 0.9em;
+}
+
+thead th.sorted-asc::after {
+  content: "\f0de";
+  color: #c93b34;
+}
+
+thead th.sorted-desc::after {
+  content: "\f0dd";
+  color: #c93b34;
+}

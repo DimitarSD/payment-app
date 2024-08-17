@@ -1,4 +1,4 @@
-import { Transaction } from "../types/Transaction";
+import { Transaction } from "./../types/Transaction";
 
 class TransactionService {
   private apiUrl = "http://localhost:3001/api/transactions";

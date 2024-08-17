@@ -1,5 +1,5 @@
 import React from "react";
-import { TransactionRowProps } from "../../types/TransactionRowProps";
+import { TransactionRowProps } from "./../../types/TransactionRowProps";
 import * as styles from "./TransactionRow.module.css";
 
 import { formatDate } from "./../../utils/dateUtils";
