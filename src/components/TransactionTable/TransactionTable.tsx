@@ -1,13 +1,13 @@
-import React from 'react';
-import useTransactions from '../../hooks/useTransactions';
-import TransactionRow from '../TransactionRow/TransactionRow';
-import * as styles from './TransactionTable.module.css';
+import React from "react";
+import useTransactions from "../../hooks/useTransactions";
+import TransactionRow from "../TransactionRow/TransactionRow";
+import * as styles from "./TransactionTable.module.css";
 
-function TransactionTable() {
+const TransactionTable = () => {
   const { transactions } = useTransactions();
 
   return (
-    <div className={styles['table-container']}>
+    <div className={styles["table-container"]}>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -22,13 +22,13 @@ function TransactionTable() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map(transaction => (
+          {transactions.map((transaction) => (
             <TransactionRow key={transaction.id} transaction={transaction} />
           ))}
         </tbody>
       </table>
     </div>
   );
-}
+};
 
 export default TransactionTable;
