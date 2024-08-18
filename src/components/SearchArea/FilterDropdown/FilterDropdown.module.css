@@ -3,16 +3,22 @@
   flex-direction: column;
 }
 
-.filterLabel {
+.filterDropdown {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 8px;
+}
+
+.fieldLabel {
   font-size: 14px;
   font-weight: bold;
   color: #4a4a4a;
   margin-bottom: 6px;
-}
-
-.filterDropdown {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .select,
@@ -41,13 +47,15 @@
   background-size: 8px 12px;
 }
 
-.select,
-.textInput {
-  margin-right: 8px;
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .addButton {
   background-color: #28a745;
+  min-height: 37px;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -69,9 +77,7 @@
     flex-direction: column;
   }
 
-  .select,
-  .textInput,
-  .addButton {
+  .fieldWrapper {
     margin-bottom: 8px;
     margin-right: 0px;
   }

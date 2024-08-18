@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "unique_id": "abc123",
+    "status": "approved",
+    "created_at": "2023-01-01T00:00:00Z",
+    "merchant_name": "Test Merchant",
+    "terminal_name": "Terminal 1",
+    "type": "Sale",
+    "error_class": "None",
+    "card_holder": "John Doe",
+    "card_number": "411111...1111",
+    "amount": 100,
+    "currency": "USD",
+    "error_message": "None"
+  }
+]

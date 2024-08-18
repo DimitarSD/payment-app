@@ -9,20 +9,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "plugins": [
-      { "name": "typescript-plugin-css-modules" },
-      { "name": "typescript-organize-imports" }
-    ]
+    "types": ["cypress"]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    "src/globals.d.ts"
+    "cypress/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "cypress"
+    "node_modules"
   ]
 }

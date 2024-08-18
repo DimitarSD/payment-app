@@ -138,3 +138,13 @@ dist
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Cypress generated files
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Cypress cache
+.cypress_cache/
+
+cypress/electron/

@@ -1,9 +1,6 @@
 import { TransactionProps } from "./../types/TransactionProps";
-import { fetchConversionRates } from "./../services/currencyService";
 
 export type SortOrder = "asc" | "desc";
-
-let cachedRates: { [key: string]: number } | null = null;
 
 // Used to map error class to display name
 // Otherwise, the sorting sort by error class which can produce visually incorrect display results
@@ -14,28 +11,27 @@ const mapErrorClassToDisplayName = (errorClass: string): string => {
   return "Unknown";
 };
 
-export const sortTransactions = async (
+export const sortTransactions = (
   transactions: TransactionProps[],
   columnName: keyof TransactionProps | null,
   order: SortOrder,
-): Promise<TransactionProps[]> => {
+  conversionRates: { [key: string]: number } | null,
+): TransactionProps[] => {
   if (!Array.isArray(transactions)) return [];
 
   if (!columnName) return transactions;
-
-  if (columnName === "amount" && !cachedRates) {
-    cachedRates = await fetchConversionRates();
-  }
 
   return [...transactions].sort((transactionA, transactionB) => {
     let cellValueA = transactionA[columnName];
     let cellValueB = transactionB[columnName];
 
-    if (columnName === "amount" && cachedRates) {
+    if (columnName === "amount" && conversionRates) {
       cellValueA =
-        (transactionA.amount / 100) * (cachedRates[transactionA.currency] || 1);
+        (transactionA.amount / 100) *
+        (conversionRates[transactionA.currency] || 1);
       cellValueB =
-        (transactionB.amount / 100) * (cachedRates[transactionB.currency] || 1);
+        (transactionB.amount / 100) *
+        (conversionRates[transactionB.currency] || 1);
     }
 
     if (columnName === "error_class") {

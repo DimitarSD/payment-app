@@ -3,7 +3,7 @@ import * as styles from "./SortableTableHeader.module.css";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import { SortableTableHeaderProps } from "./../../types/SortableTableHeaderProps";
+import { SortableTableHeaderProps } from "./../../../types/SortableTableHeaderProps";
 
 const SortableTableHeader = <T,>({
   columns,

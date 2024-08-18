@@ -25,13 +25,15 @@ const Dashboard = () => {
   }, [transactions, dateRange, filters]);
 
   return (
-    <div className={styles.dashboardContainer}>
-      <SearchArea setFilters={setFilters} setDateRange={setDateRange} />
-      <TransactionTable transactions={filteredTransactions} />
+    <>
       <div className={styles["currency-label"]}>
         Sorting default currency: USD
       </div>
-    </div>
+      <div className={styles.dashboardContainer}>
+        <SearchArea setFilters={setFilters} setDateRange={setDateRange} />
+        <TransactionTable transactions={filteredTransactions} />
+      </div>
+    </>
   );
 };
 

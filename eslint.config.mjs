@@ -2,6 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import cypressPlugin from "eslint-plugin-cypress";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
@@ -9,6 +10,14 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    plugins: {
+      cypress: cypressPlugin,
+    },
+    rules: {
+      ...cypressPlugin.configs.recommended.rules,
+    },
+  },
   {
     settings: {
       react: {
@@ -31,6 +40,9 @@ export default [
       ".idea/",
       "*.tmp",
       "*.swp",
+      "cypress/screenshots/", 
+      "cypress/videos/",
+      "cypress/downloads/",
     ],
   },
 ];

@@ -1,18 +1,18 @@
 import React from "react";
-import { TransactionProps } from "./../../types/TransactionProps";
+import { TransactionProps } from "./../../../types/TransactionProps";
 import * as styles from "./TransactionRow.module.css";
-import * as tagStyles from "./../../styles/tags.module.css";
+import * as tagStyles from "./../../../styles/tags.module.css";
 
-import { formatDate } from "./../../utils/dateUtils";
+import { formatDate } from "./../../../utils/dateUtils";
 import {
   formatTransactionType,
   styleTransactionType,
   formatErrorClass,
   formatAmount,
-} from "./../../utils/transactionUtils";
+} from "./../../../utils/transactionUtils";
 
 import { Link } from "react-router-dom";
-import { getCardType } from "./../../utils/cardUtils";
+import { getCardType } from "./../../../utils/cardUtils";
 
 type TransactionData = {
   transaction: TransactionProps;

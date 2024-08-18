@@ -49,45 +49,59 @@ const FilterDropdown = ({ onAddFilter, filters }: FilterDropdownProps) => {
 
   return (
     <div className={styles.filterDropdownWrapper}>
-      <label className={styles.filterLabel}>FILTERS</label>
       <div className={styles.filterDropdown}>
-        <select
-          value={selectedColumn}
-          onChange={(e) =>
-            setSelectedColumn(e.target.value as keyof TransactionProps)
-          }
-          className={styles.select}
-        >
-          {filteredColumns.map((column) => (
-            <option key={column} value={column}>
-              {column}
-            </option>
-          ))}
-        </select>
-        <select
-          value={matchType}
-          onChange={(e) => setMatchType(e.target.value as Filter["matchType"])}
-          className={styles.select}
-        >
-          <option value="equal">Equal</option>
-          <option value="starts with">Starts With</option>
-          <option value="ends with">Ends With</option>
-          <option value="contains">Contains</option>
-        </select>
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          className={styles.textInput}
-          placeholder="Value"
-        />
-        <button
-          onClick={handleAddFilter}
-          className={styles.addButton}
-          disabled={filteredColumns.length === 0}
-        >
-          Add Filter
-        </button>
+        <div className={styles.fieldWrapper}>
+          <label className={styles.fieldLabel}>FILTERS</label>
+          <select
+            value={selectedColumn}
+            onChange={(e) =>
+              setSelectedColumn(e.target.value as keyof TransactionProps)
+            }
+            className={styles.select}
+          >
+            {filteredColumns.map((column) => (
+              <option key={column} value={column}>
+                {column}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className={styles.fieldWrapper}>
+          <label className={styles.fieldLabel}>MATCHED BY</label>
+          <select
+            value={matchType}
+            onChange={(e) =>
+              setMatchType(e.target.value as Filter["matchType"])
+            }
+            className={styles.select}
+          >
+            <option value="equal">Equal</option>
+            <option value="starts with">Starts With</option>
+            <option value="ends with">Ends With</option>
+            <option value="contains">Contains</option>
+          </select>
+        </div>
+
+        <div className={styles.fieldWrapper}>
+          <label className={styles.fieldLabel}>VALUE</label>
+          <input
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            className={styles.textInput}
+            placeholder="Value"
+          />
+        </div>
+        <div className={styles.buttonWrapper}>
+          <button
+            onClick={handleAddFilter}
+            className={styles.addButton}
+            disabled={filteredColumns.length === 0}
+          >
+            Add Filter
+          </button>
+        </div>
       </div>
     </div>
   );
