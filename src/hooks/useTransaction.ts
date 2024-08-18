@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TransactionProps } from "../types/TransactionProps";
+import { TransactionProps } from "./../types/TransactionProps";
 import TransactionService from "./../services/TransactionService";
 
 const transactionService = new TransactionService();

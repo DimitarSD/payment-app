@@ -1,5 +1,5 @@
 import { ColumnConfig } from "./../types/SortableTableHeaderProps";
-import { TransactionProps } from "../types/TransactionProps";
+import { TransactionProps } from "./../types/TransactionProps";
 
 export const tableColumns: ColumnConfig<TransactionProps>[] = [
   { key: "status", label: "Status" },

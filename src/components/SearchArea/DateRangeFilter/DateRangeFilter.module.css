@@ -1,0 +1,31 @@
+.dateRangeFilter {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dateFilter {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.dateLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 6px;
+}
+
+.dateInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .dateRangeFilter {
+    flex-direction: column;
+  }
+}

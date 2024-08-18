@@ -1,4 +1,4 @@
-import { TransactionProps } from "../types/TransactionProps";
+import { TransactionProps } from "./../types/TransactionProps";
 import { fetchConversionRates } from "./../services/currencyService";
 
 export type SortOrder = "asc" | "desc";

@@ -1,4 +1,4 @@
-import { TransactionProps } from "../types/TransactionProps";
+import { TransactionProps } from "./../types/TransactionProps";
 
 class TransactionService {
   private apiUrl = "http://localhost:3001/api/transactions";

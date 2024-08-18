@@ -1,0 +1,25 @@
+.selectedFilter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background-color: #ffe8e8;
+  border: 1px solid #ffb3b3;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: auto;
+}
+
+.removeButton {
+  background-color: transparent;
+  border: none;
+  color: #ff4d4f;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.removeButton:hover {
+  color: #2d1111;
+}

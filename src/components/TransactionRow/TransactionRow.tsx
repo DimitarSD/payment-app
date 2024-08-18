@@ -24,7 +24,7 @@ const TransactionRow = ({ transaction }: TransactionData) => {
   console.log(cardIconSrc);
 
   return (
-    <tr key={transaction.unique_id}>
+    <tr>
       <td className={styles[`status-${transaction.status.toLowerCase()}`]}>
         {transaction.status}
       </td>

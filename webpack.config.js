@@ -1,8 +1,12 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import Dotenv from "dotenv-webpack";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
-module.exports = {
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default {
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),

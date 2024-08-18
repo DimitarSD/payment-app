@@ -1,0 +1,83 @@
+.filterDropdownWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 6px;
+}
+
+.filterDropdown {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.select,
+.textInput,
+.addButton {
+  font-size: 14px;
+  line-height: 1.36;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: auto;
+}
+
+.textInput,
+.addButton {
+  padding: 8px 12px;
+}
+
+.select {
+  padding: 8px 30px 8px 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"><path fill="gray" d="M0 0 L5 5 L10 0 Z"/></svg>')
+    no-repeat right 12px center;
+  background-color: #fff;
+  background-size: 8px 12px;
+}
+
+.select,
+.textInput {
+  margin-right: 8px;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.addButton:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .filterDropdown {
+    flex-direction: column;
+  }
+
+  .select,
+  .textInput,
+  .addButton {
+    margin-bottom: 8px;
+    margin-right: 0px;
+  }
+
+  .addButton {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
