@@ -1,5 +1,7 @@
 # Payment App
 
+![Payment App Screenshot](./public/payment-app-img.png)
+
 ## Server Setup
 
 Before running the app you need to set up and start the backend server:
